@@ -1,0 +1,427 @@
+.s-container
+	display: flex
+	padding: 10px 0
+
+.s-center, .s-right
+	order: 1
+
+.s-center
+	flex: 0 0 800px
+	max-width: 800px
+	padding: 9px 25px 25px
+	font-size: 11px
+	line-height: 1.7
+	&__section
+		padding-top: 35px
+	.s-link
+		color: $text-color-3
+		&::after
+			background: $text-color-3
+			bottom: 3px
+	p
+		margin-bottom: 1.4em
+	.s-img-wrap
+		margin-top: 4px
+
+.s-left, .s-right
+	flex: 1 0 auto
+	max-width: 200px
+	padding: 1px 6px 0
+	border: 0 solid #555
+
+.s-left
+	border-right-width: 2px
+
+.s-side
+	p
+		margin-bottom: 0
+	&__title
+		min-height: 28px
+		position: relative
+		padding: 0 0 6px 44px 
+		border-bottom: 1px dotted #555
+		line-height: 1
+		p
+			margin-bottom: 0.05em
+			font-size: 14px
+			font-weight: 700
+		small
+			display: block
+			font-size: 10px
+	&__content
+		padding-top: 15px
+		padding-bottom: 19px
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+		font-size: 12px
+		> li
+			display: flex
+			flex-wrap: wrap
+			position: relative
+			margin-bottom: 0.25em
+			padding-left: 39px
+		.s-link
+			font-size: 12px
+	.s-ic
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+	.s-ic-search
+		margin-top: -3px
+		left: 12px
+	.s-ic-metro-sm
+		left: 13px
+	.s-ic-metro-lg
+		margin-top: -7px
+		left: 4px
+	.s-ic-mark-1
+		left: 16px
+	.s-ic-mark-2
+		margin-top: -8px
+	.s-ic-mark-3
+		left: 10px
+		margin-top: -6px
+	.s-ic-check-1
+		left: 17px
+	.s-ic-services
+		left: 1px
+		margin-top: -5px
+	.s-ic-listing
+		left: 17px
+	.s-ic-star
+		left: 14px
+		margin-top: -10px
+
+
+.s-nav__list
+	> li
+		&::before
+			content: ''
+			display: block
+			width: 7px
+			height: 13px
+			background: url('../img/sprite-icons.png') no-repeat -83px -24px
+			position: absolute
+			top: 4px
+			left: 25px
+			z-index: 0
+	ul
+		width: 100%
+		margin: 5px 0 0
+		padding-left: 10px
+		list-style: none
+		li
+			font-size: 0
+			&::before
+				content: '-'
+				display: inline-block
+				margin-right: 3px
+				font-size: 12px
+
+
+
+.s-right
+	padding-top: 6px
+	border-left-width: 2px
+	.s-side__title
+		padding-left: 49px
+	.s-ic-mark-2
+		left: 15px
+	.s-map
+		max-width: 186px
+		height: 152px
+		border-radius: $bd-rad
+
+
+.s-map-wrapper
+	padding: 12px 0
+	border-bottom: 1px dotted #555
+.s-map
+	width: 100%
+	border: 1px solid $text-color-3
+	overflow: hidden
+
+	
+.s-hot
+	padding-top: 28px
+	.s-side__title
+		border: none
+	&__list
+		margin: 0
+		padding: 10px 0 30px
+		list-style: none
+		li:not(:last-child)
+			margin-bottom: 7px
+	&__link
+		display: flex
+		align-items: flex-end
+		&:hover
+			.s-hot__girl
+				color: $red-color
+				&::after
+					visibility: hidden
+					width: 0
+
+	&__img
+		flex: 0 0 46px
+		width: 46px
+		height: 60px
+		margin-right: 8px
+		border: 1px solid $text-color-3	
+		border-radius: $bd-rad
+		overflow: hidden
+	&__data
+		font-size: 14px
+		color: $text-color-3
+		p
+			padding-top: 3px
+			line-height: 1.2
+			border-bottom: 1px solid #afafaf
+	&__girl
+		font-size: inherit
+		&::after
+			background: #afafaf
+
+
+
+.s-footer
+	padding: 57px 58px 70px 33px
+	border-top: 1px solid #555
+	display: flex
+	align-items: center
+	justify-content: space-between
+	font-size: 12px
+	&__data
+		margin: 0
+		font-family: $font-2
+		b
+			font-size: 13px
+	&__links
+		display: flex
+		margin: 0
+		padding-left: 0
+		list-style: none
+		li
+			padding: 0 18px
+			line-height: 1.2
+			&:not(:last-child)
+				border-right: 1px solid $text-color-3
+	&__link
+		font-weight: 700
+		color: $text-color-3
+		&::after
+			background: $text-color-3
+			bottom: 0
+
+
+.s-catalog
+	margin-top: 30px
+	display: flex
+	flex-wrap: wrap
+.s-card
+	flex: 0 0 48%
+	max-width: 48%
+	margin-bottom: 15px
+	font-size: 12px
+	&:nth-child(2n)
+		padding-left: 37px
+		border-left: 1px dotted #555
+	&__title
+		margin-bottom: .3em
+		font-size: 14px
+		font-weight: 700
+		text-decoration: underline
+	&__data
+		&-1
+			line-height: 1.2
+		&-2
+			display: flex
+			flex-wrap: wrap
+			margin-top: 10px
+	&__img
+		width: 106px
+		height: 144px
+	&__col
+		padding-left: 19px
+	&__footer
+		max-width: 220px
+		font-style: italic
+		p
+			margin: 0
+			border-bottom: 1px solid #afafaf
+	&__link
+		padding: 10px 0 0 220px
+
+.s-params
+	line-height: 1
+	&__label
+		width: 72px
+	
+.s-prices
+	margin-top: 6px
+	line-height: 1.1
+	&__label
+		width: 94px
+	&__val
+		font-weight: 700
+		color: $red-color
+
+
+
+.s-price-table
+	width: 100%
+	max-width: 549px
+	margin: 35px auto 0
+	font-size: 12px
+	th, td
+		min-width: 109px
+		border: 1px solid #cccccc
+		text-align: center
+	th
+		font-size: 11px
+		font-weight: 400
+	td:not(.s-cell-title)
+		font-weight: 700
+
+.s-cell-title
+	width: 221px
+	height: 45px
+
+
+.s-reccomend
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	font-size: 12px
+	&__item
+		flex: 0 0 138px
+		max-width: 138px
+		text-align: center
+	&__link
+		&:hover
+			.s-reccomend__title
+				color: $red-color
+				&::after
+					visibility: hidden
+					width: 0
+	&__img
+		width: 100%
+		height: 180px
+		margin: 0 auto
+	&__title
+		font-size: 16px
+	p
+		margin: 0
+		line-height: 1.6
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 1199px)
+	
+	.s-left
+		width: 100%
+		max-width: 100%
+		padding-top: 10px
+		position: absolute
+		top: 41px
+		left: 0
+		z-index: 2
+		background: #fff
+		transform: translateX(-100%) scale(0)
+		transform-origin: 0 0
+		opacity: 0
+		visibility: hidden
+		border: none
+		transition: all .2s linear
+		&.opened
+			opacity: 1
+			visibility: visible
+			transform: translateX(0) scale(1)
+			transition: transform .3s linear, opacity .3s .1s linear
+
+	.s-center
+		flex: 1 0 0
+		max-width: 100%
+
+
+
+@media only screen and (max-width : 991px)
+
+	.s-container
+		display: block
+	.s-right
+		max-width: 100%
+		border: none
+
+	.s-footer
+		display: block
+		padding: 30px 15px
+		text-align: center
+	.s-live-counter
+		display: flex
+	.s-footer__links, .s-live-counter
+		margin-top: 30px
+		justify-content: center
+
+	.s-reccomend__item
+		margin: 0 0 30px
+
+
+
+
+
+@media only screen and (max-width : 767px)
+
+	.s-center
+		padding-left: 15px
+		padding-right: 15px
+
+	.s-footer__links
+		display: block
+	.s-footer__links li
+		padding: 8px 0
+	.s-footer__links li:not(:last-child)
+		border: none
+
+	.s-catalog
+		display: block
+	.s-card
+		max-width: 100%
+		&:nth-child(2n)
+			padding-left: 0
+			border-left: none
+
+
+	.s-price-table
+		th
+			display: none
+		tr, td
+			display: block
+		td 
+			min-width: 1px
+			border: none
+			border-bottom: 1px solid #666
+			padding-left: 50%
+			background-image: none
+			text-align: left
+		td
+			&::before 
+				content: attr(data-title)
+				display: inline-block
+				width: 100%
+				margin-left: -95%
+				font-weight: 400
+		.s-cell-title
+			width: 100%
+			height: auto
+			padding-left: 0
+			font-size: 14px
+			&::before 
+				display: none

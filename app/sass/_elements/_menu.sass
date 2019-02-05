@@ -1,0 +1,136 @@
+.s-menu
+	&__list
+		display: flex
+		justify-content: space-between
+		margin: 0
+		padding: 0 0 0 5px
+		list-style: none
+		li
+			width: 100%
+			position: relative
+			&:not(:last-child)
+				&::after
+					content: ''
+					width: 1px
+					height: 100%
+					position: absolute
+					top: 0
+					right: 0
+					z-index: 0
+					background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 14.5%, $text-color-3 50%, #ffffff 85.5%, #ffffff 100%)
+	&__link
+		display: block
+		height: 73px
+		padding: 51px 5px 5px
+		background: #fff url('../img/sprite-menu-2.png') no-repeat
+		font-size: 11px
+		font-weight: 400
+		text-align: center
+		white-space: nowrap
+		text-decoration: underline
+		color: $text-color-3
+		transition: all .1s linear
+		&:hover
+			color: $red-color
+			text-decoration: none
+			transition: all .1s linear
+		&--active
+			font-weight: 700
+			text-decoration: none
+			transition: all .2s linear
+		&-1
+			background-position: 23px -5px
+		&-2
+			background-position: -72px -5px
+		&-3
+			background-position: -172px -5px
+		&-4
+			background-position: -271px -5px
+		&-5
+			background-position: -375px -5px
+		&-6
+			background-position: -475px -5px
+		&-7
+			background-position: -574px -5px
+		&-8
+			background-position: -676px -5px
+		&-9
+			background-position: -773px -5px
+		&-10
+			background-position: -874px -5px
+		&-11
+			background-position: -975px -5px
+		&-12
+			background-position: -1077px -5px
+
+	&-btn
+		.s-ic-burger
+			margin-left: 15px
+		&.toggle
+			.s-ic-burger
+				background: none
+				transition: all .2s
+				&::before, &::after
+					top: 0
+					transition: all .2s
+				&::before
+					transform: rotate(45deg)
+				&::after
+					transform: rotate(-45deg)
+
+.s-mob-btns
+	display: none
+	border-bottom: 1px solid rgba(#555, .25)
+.s-mob-btn
+	position: relative
+	height: 40px
+	margin: 0 -.5px
+	text-transform: uppercase
+	box-shadow: 0 0 0 1px rgba(#000, .25)
+	&:active
+		background: rgba(#555, .1)
+		transition: all .1s
+	&.toggle
+		background: rgba(#555, .1)
+		transition: all .1s
+
+
+
+@media only screen and (max-width : 1199px)
+
+	.s-mob-btns
+		display: flex
+	.s-mob-btn
+		display: inline-flex
+		width: 50%
+		align-items: center
+		justify-content: center
+
+	.s-menu__list
+		transform: translateX(100%) scale(0)
+		transform-origin: 100% 0
+		opacity: 0
+		visibility: hidden
+		display: block
+		padding: 10px 0 15px
+		background: #fff
+		box-shadow: 0 10px 10px -10px rgba(0,0,0,.15)
+		width: 100%
+		position: absolute
+		top: 41px
+		z-index: 2
+		transition: all .2s linear
+		&.opened
+			opacity: 1
+			visibility: visible
+			transform: translateX(0) scale(1)
+			transition: transform .2s linear, opacity .2s .1s linear
+
+	.s-menu__list li:not(:last-child)::after
+		display: none
+	.s-menu__link
+		height: auto
+		padding: 6px 15px
+		background: none
+		font-size: 16px
+		text-decoration: none

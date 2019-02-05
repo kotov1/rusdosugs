@@ -1,0 +1,97 @@
+.s-header
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	height: 74px
+	padding: 0 7px
+	background: url('../img/header-bg.jpg') no-repeat
+	background-size: cover
+
+.s-logo
+	display: flex
+	align-items: flex-end
+	&__img
+		width: 55px
+		height: 62px
+	&__txt
+		font: italic 30px $font-3
+
+
+.s-choose
+	display: flex
+	flex-wrap: wrap
+	padding: 0 30px
+	&__col
+		padding: 2px 70px 5px 45px
+		&:first-child
+			border-right: 1px dotted #7f7f7f
+	&__label
+		margin-bottom: .25em
+		font: 11px $font-2
+		color: $text-color-2
+	&__select
+		position: relative
+		font-size: 0
+		select
+			width: 150px
+			padding: 2px 0
+			font: 11px $font-2
+			color: $text-color-2
+	&__btn
+		position: absolute
+		right: -27px
+		cursor: pointer
+
+
+.s-callback
+	margin-left: auto
+	text-align: right
+	font-size: 0
+	transform: translateY(-5px)
+	.s-head-phone
+		display: block
+	&__open
+		font-size: 12px
+		line-height: 1
+		text-decoration: underline
+		cursor: pointer
+		&:hover
+			text-decoration: none
+
+
+
+@media only screen and (max-width : 1199px)
+
+	.s-header
+		height: auto
+		padding: 15px 7px
+	.s-choose
+		display: block
+		margin: 0 auto
+		padding: 0
+	.s-choose__col:first-child
+		border: none
+	.s-choose__btn
+		height: 21px
+	.s-callback
+		margin-left: 0
+
+
+@media only screen and (max-width : 767px)
+
+	.s-choose__col
+		padding: 5px 45px
+	.s-callback
+		flex: 0 0 100%
+		max-width: 100%
+		margin-top: 15px
+		text-align: center
+
+
+@media only screen and (max-width : 480px)
+
+	.s-logo
+		flex: 0 0 100%
+		max-width: 100%
+		display: flex
+		justify-content: center

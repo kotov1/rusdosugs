@@ -1,0 +1,112 @@
+.s-ic
+	display: inline-block
+	background: url('../img/sprite-icons.png') no-repeat
+
+
+.s-ic-choose
+	width: 23px
+	height: 33px
+	background-position: 0 0
+
+
+.s-ic-burger
+	width: 20px
+	height: 2px
+	border-radius: 15px
+	background-color: $text-color
+	position: relative
+	z-index: 1
+	transition: all .25s
+	&::before, &::after  
+		content: ""
+		width: 100%
+		height: 2px
+		position: absolute
+		left: 0
+		border-radius: 15px
+		background-color: $text-color
+		transition: all .25s					
+	&::before
+		top: -6px
+	&::after 
+		top: 6px
+
+
+
+.s-ic-home
+	width: 11px
+	height: 12px
+	background-position: -34px 0
+
+
+.s-ic-search
+	width: 17px
+	height: 17px
+	background-position: -33px -21px
+
+
+.s-ic-metro-sm
+	width: 19px
+	height: 18px
+	background-position: -58px 1px
+
+
+.s-ic-metro-lg
+	width: 24px
+	height: 29px
+	background-position: -40px -45px
+
+
+.s-ic-services
+	width: 28px
+	height: 30px
+	background-position: 0px -43px
+
+
+.s-ic-mark-1
+	width: 12px
+	height: 13px
+	background-position: -60px -24px
+
+
+.s-ic-check-1
+	width: 13px
+	height: 15px
+	background-position: -88px 0px
+
+
+.s-ic-listing
+	width: 7px
+	height: 13px
+	background-position: -83px -24px
+
+
+.s-ic-mark-2
+	width: 25px
+	height: 26px
+	background-position: -72px -45px
+
+
+.s-ic-star
+	width: 29px
+	height: 25px
+	background-position: 1px -80px
+
+
+.s-ic-mark-3
+	width: 24px
+	height: 29px
+	background-position: -36px -82px
+
+
+.s-ic-time1, .s-ic-time2, .s-ic-time3
+	width: 16px
+	height: 16px
+	margin-right: 5px
+	vertical-align: sub
+.s-ic-time1
+	background-position: 0 -116px
+.s-ic-time2
+	background-position: -23px -116px
+.s-ic-time3
+	background-position: -46px -116px

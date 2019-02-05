@@ -1,0 +1,256 @@
+.s-page
+	margin: 0 auto
+	background: #fff
+	box-shadow: 0 0 10px 1px rgba(#000, .25)
+@media (min-width: 576px)
+  .s-page
+    max-width: 540px
+@media (min-width: 768px)
+  .s-page
+    max-width: 720px
+@media (min-width: 992px)
+  .s-page
+    max-width: 960px
+@media (min-width: 1200px)
+  .s-page
+    max-width: 1200px
+
+
+.s-main
+	position: relative
+
+
+// Titles and text
+h1
+	margin-bottom: 1.1em
+	font-size: 18px
+	line-height: 1.2
+	font-weight: 700
+	text-align: center
+
+h2
+	margin-bottom: 1.2em
+	font-size: 16px
+	font-weight: 700
+	text-align: center
+
+
+.s-img
+	display: block
+	max-width: 100%
+	height: auto
+
+
+.s-nowrap
+	white-space: nowrap
+
+
+.s-head-phone
+	font: italic 30px/1 $font-3
+
+.s-phone-link
+	color: inherit
+	text-decoration: none
+	cursor: default
+
+
+.s-float-l
+	float: left
+	margin-right: 10px
+
+.s-float-r
+	float: right
+	margin-left: 10px
+
+.s-text-left
+	text-align: left
+
+
+.s-link
+	position: relative
+	display: inline-block
+	text-decoration: none
+	transition: all .1s linear
+	&:hover
+		text-decoration: none
+		color: $red-color
+		transition: all .1s linear
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 1px
+		bottom: 1px
+		left: 0
+		color: inherit
+		background-color: currentColor
+		transition: all .2s
+	&:hover::after
+		visibility: hidden
+		width: 0
+
+
+.s-strong
+	color: $red-color
+	text-decoration: underline
+
+
+
+// breadcrumbs
+.breadcrumbs
+	padding: 0 25px
+	list-style: none
+	background: #7f7f7f
+	font-size: .75em
+	>
+		span
+			display: inline-block
+			+ span:before
+				padding: 0 26px
+				color: #fff
+				content: ">"
+			a
+				display: inline-flex
+				align-items: center
+				padding: .25em 0 .334em
+				color: #fff
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+			&:last-child
+				a
+					text-decoration: none
+					cursor: default
+	&__home
+		height: 100%
+		margin-right: 17px
+		padding-right: 15px
+		border-right: 1px dotted #fff
+		.s-ic-home
+			transform: translateY(2px)
+@media only screen and (max-width : 480px)
+	.breadcrumbs
+		padding: 0 15px
+	.breadcrumbs>span+span:before
+		padding: 0 5px
+	.breadcrumbs__home
+		margin-right: 12px
+		padding-right: 10px
+
+
+blockquote
+	margin: 40px 0
+	padding: 15px 40px
+	color: #646464
+	position: relative
+	text-align: center
+	font-size: 14px
+	font-style: italic
+	&::before, &::after
+		height: 2px
+		position: absolute
+		left: 0
+		right: 0
+		font: normal 400 30px/.5 $default-font
+		color: inherit
+		background: linear-gradient(to right, #b3b3b3 47%, transparent 47%, transparent), linear-gradient(to right, transparent, transparent 53%, #b3b3b3 53%)
+	&::before
+		content: "\201C"
+		top: 0
+	&::after
+		content: "\201D"
+		bottom: 0
+	p
+		margin: 0
+
+
+
+ul, ol
+	margin: 21px 0 0 0
+	padding: 0 0 0 52px
+	&.two-columns
+		&:before, &:after
+			content: " "
+			display: table
+			clear: both
+		li
+			width: 47%
+			float: left
+			&:nth-child(2n+1)
+				margin-right: 6%
+
+
+
+.s-gallery
+	max-width: 685px
+	margin: 30px auto 0
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	.s-img-wrap
+		margin: 5px
+
+.s-img-wrap
+	border-radius: $bd-rad
+	border: 1px solid $text-color-3
+	overflow: hidden
+	margin-bottom: 10px
+	&--sm
+		width: 152px
+		height: 96px
+	&--md
+		width: 202px
+		height: 128px
+	&--lg
+		width: 252px
+		height: 159px
+
+
+.s-pagination
+	display: flex
+	justify-content: center
+	margin: 30px 0 0
+	padding: 0
+	list-style: none
+	font-size: 12px
+	line-height: 14px
+	color: $text-color-3
+	&__link
+		display: inline-block
+		padding: 0 4px
+		color: inherit
+		text-decoration: underline
+		transition: all .1s linear
+		&:hover
+			color: $red-color
+			text-decoration: none
+			transition: all .2s linear
+			.s-underline
+				text-decoration: none
+		&--active
+			color: $red-color
+			font-weight: 700
+			text-decoration: none
+			transition: all .2s linear
+		&--next
+			font-size: 14px
+			line-height: 12px
+			text-decoration: none
+	&__points
+		padding: 0 9px
+		text-decoration: none
+
+.s-underline
+	text-decoration: underline
+
+
+
+
+@media only screen and (max-width : 767px)
+	
+	ol, ul
+		padding-left: 30px
+	blockquote
+		margin: 30px 0
+		padding: 15px
