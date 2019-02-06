@@ -35,10 +35,11 @@ gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/slick-carousel/slick/slick.min.js',
 		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+		'app/libs/jquery.inputmask.js ',
 		'app/js/common.js'
 		])
 	.pipe(concat('scripts.js'))
-	// .pipe(uglify())
+	.pipe(uglify())
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
 });
@@ -56,7 +57,7 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({outputStyle: 'expanded'}).on("error", notify.onError()))
-	// .pipe(rename({suffix: '.min', prefix : ''}))
+	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
 	.pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))

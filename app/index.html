@@ -43,11 +43,11 @@
 							<div class="s-choose__label">Город:</div>
 							<div class="s-choose__select">
 								<select name="s_city">
-									<option value="Санкт-Петербург">Санкт-Петербург</option>
-									<option value="Москва">Москва</option>
-									<option value="Тула">Тула</option>
-									<option value="Воронеж">Воронеж</option>
-									<option value="Омск">Омск</option>
+									<option data-url="https://en.wikipedia.org/wiki/Saint_Petersburg" value="Санкт-Петербург" class="current">Санкт-Петербург</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Москва">Москва</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Тула">Тула</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Воронеж">Воронеж</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Омск">Омск</option>
 								</select>
 								<button type="button" class="s-ic s-ic-choose s-choose__btn"></button>
 							</div>
@@ -57,11 +57,11 @@
 							<div class="s-choose__label">Станция метро:</div>
 							<div class="s-choose__select">
 								<select name="s_metro">
-									<option value="Санкт-Петербург">Санкт-Петербург</option>
-									<option value="Москва">Москва</option>
-									<option value="Тула">Тула</option>
-									<option value="Воронеж">Воронеж</option>
-									<option value="Омск">Омск</option>
+									<option data-url="https://en.wikipedia.org/wiki/Saint_Petersburg_Metro" value="Санкт-Петербург" class="current">Санкт-Петербург</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow_Metro" value="Москва">Москва</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Тула">Тула</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Воронеж">Воронеж</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Омск">Омск</option>
 								</select>
 								<button type="button" class="s-ic s-ic-choose s-choose__btn"></button>
 							</div>
@@ -71,7 +71,7 @@
 
 					<div class="s-callback">
 						<noindex><a href="tel:+7495555555" class="s-phone-link s-head-phone">+7 (495) 55 55 55</a></noindex>
-						<button type="button" class="s-callback__open">Обратный звонок</button>
+						<button type="button" class="s-callback__open s-js-callback">Обратный звонок</button>
 					</div>
 
 				</header>
@@ -104,7 +104,7 @@
 							<li><a href="#" class="s-menu__link s-menu__link-8">Интим-чат</a></li>
 							<li><a href="#" class="s-menu__link s-menu__link-9">Форум</a></li>
 							<li><a href="#" class="s-menu__link s-menu__link-10">Добавить анкету</a></li>
-							<li><a href="#" class="s-menu__link s-menu__link-11">Заказать звонок</a></li>
+							<li><button class="s-menu__link s-menu__link-11 s-js-callback">Заказать звонок</button></li>
 							<li><a href="#" class="s-menu__link s-menu__link-12">Оставить заявку</a></li>
 						</ul>
 	
@@ -143,7 +143,7 @@
 							<h1>Проститутки Москвы</h1>
 
 							<div class="s-img-wrap s-img-wrap--sm s-float-l">
-								<img src="" data-mfp="" class="s-img" alt="image">
+								<img src="img/demo/demo-1.jpg" class="s-img s-content-img" alt="image">
 							</div>
 
 							<p>Современный мир для любого мужчины предлагает множество соблазнов, развлечений, подчас испытаний.<br>
@@ -157,7 +157,7 @@
 							<h2>Знакомства</h2>
 
 							<div class="s-img-wrap s-img-wrap--sm s-float-r">
-								<img src="" data-mfp="" class="s-img" alt="image">
+								<img src="img/demo/demo-2.jpg" class="s-img s-content-img" alt="image">
 							</div>
 
 							<p>Знакомства с проституткой по реальной цене в элитном плане и с желанными или любыми услугами не составит труда, если будет использован формат данной страницы.</p>
@@ -181,22 +181,22 @@
 
 							<div class="s-gallery">
 								<div class="s-img-wrap s-img-wrap--sm">
-									<img src="" data-mfp="" class="s-image" alt="alt">
+									<img src="" class="s-image s-content-img" alt="alt">
 								</div>
 								<div class="s-img-wrap s-img-wrap--sm">
-									<img src="" data-mfp="" class="s-image" alt="alt">
+									<img src="" class="s-image s-content-img" alt="alt">
 								</div>
 								<div class="s-img-wrap s-img-wrap--sm">
-									<img src="" data-mfp="" class="s-image" alt="alt">
+									<img src="" class="s-image s-content-img" alt="alt">
 								</div>
 								<div class="s-img-wrap s-img-wrap--md">
-									<img src="" data-mfp="" class="s-image" alt="alt">
+									<img src="" class="s-image s-content-img" alt="alt">
 								</div>
 								<div class="s-img-wrap s-img-wrap--md">
-									<img src="" data-mfp="" class="s-image" alt="alt">
+									<img src="" class="s-image s-content-img" alt="alt">
 								</div>
 								<div class="s-img-wrap s-img-wrap--lg">
-									<img src="" data-mfp="" class="s-image" alt="alt">
+									<img src="" class="s-image s-content-img" alt="alt">
 								</div>
 							</div>
 
@@ -529,7 +529,7 @@
 								<h6>Знакомства</h6>
 
 								<div class="s-img-wrap s-img-wrap--sm s-float-r">
-									<img src="" data-mfp="" class="s-img" alt="image">
+									<img src="img/demo/demo-3.jpg" class="s-img s-content-img" alt="image">
 								</div>
 								<p>Знакомства с проституткой по реальной цене в элитном плане и с желанными или любыми услугами не составит труда, если будет использован формат данной страницы.</p>
 								<p>Жрицы любви, прекрасные феи отличного качества в элитном плане здесь и тут, найдете здесь и,  cоответственно, они избавят вас от скуки именно в том месте, где вы выберете искомую секс-партнершу.</p>
@@ -777,12 +777,31 @@
 					<div class="s-live-counter"><img src="img/live-counter.jpg" alt="alt"></div>
 				</footer>
 
-				
-
-
 
 			</div>
 
+
+			<div class="s-scroll-btn-wrap" style="display: none;">
+				<div class="s-scroll-btn"></div>
+			</div>
+
+
+			<div class="s-modal mfp-hide">
+				<div class="s-modal__container">
+					<div class="mfp-close"></div>
+					<div class="s-modal__title">мы перезвоним вам в течение 10&nbsp;минут</div>
+					<div class="s-modal__form">
+						<form action="#">
+							<input type="text" name="Имя" class="s-modal__input err" placeholder="Ваше имя" required>
+							<input type="tel" name="Телефон" class="s-modal__input s-js-mask" placeholder="Телефон" required>
+							<button type="submit" class="s-modal__btn">перезвоните мне</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="s-modal-img"></div>
 
 
 

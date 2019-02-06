@@ -1,12 +1,18 @@
 .s-geo
 	max-width: 581px
 	&__list
-		margin: 30px 0 0
-		padding-left: 0
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin: 23px 0 0
+		padding-left: 6%
 		list-style: none
-		font-size: 14px
+		font: 14px $default-font
 		li
+			flex: 0 0 34%
+			max-width: 34%
 			display: flex
+			margin-bottom: 7px
 			align-items: center
 			line-height: 1
 			&::before
@@ -18,7 +24,27 @@
 				margin-right: 8px
 				background: url('../img/sprite-icons.png') no-repeat -88px 0
 				z-index: 0
+			&:last-child:nth-child(2n+1)
+				margin: 0 auto
 	.s-link
 		&:hover
 			color: $red-color
 			transition: color .1s linear
+		&::after
+			bottom: 0
+
+
+
+@media only screen and (max-width : 991px)
+
+	.s-geo
+		max-width: 100%
+
+@media only screen and (max-width : 767px)
+
+	.s-geo__list
+		display: block
+		padding-left: 0
+		li
+			max-width: 100%
+			align-items: flex-start

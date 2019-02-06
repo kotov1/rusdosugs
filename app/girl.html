@@ -18,7 +18,7 @@
 		<meta name="msapplication-config" content="img/favicon/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 
-		<title>RusDosugs - Главная</title>
+		<title>RusDosugs - Девушка</title>
 
 		<link rel="stylesheet" href="css/styles.css">
 
@@ -32,10 +32,10 @@
 
 				<header class="s-header">
 
-					<a href="index.html" class="s-logo">
+					<div class="s-logo">
 						<img src="img/logo.png" alt="RusDosugs" class="s-img s-logo__img">
 						<span class="s-logo__txt">RusDosugs</span>
-					</a>
+					</div>
 
 					<div class="s-choose">
 
@@ -43,11 +43,11 @@
 							<div class="s-choose__label">Город:</div>
 							<div class="s-choose__select">
 								<select name="s_city">
-									<option value="Санкт-Петербург">Санкт-Петербург</option>
-									<option value="Москва">Москва</option>
-									<option value="Тула">Тула</option>
-									<option value="Воронеж">Воронеж</option>
-									<option value="Омск">Омск</option>
+									<option data-url="https://en.wikipedia.org/wiki/Saint_Petersburg" value="Санкт-Петербург" class="current">Санкт-Петербург</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Москва">Москва</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Тула">Тула</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Воронеж">Воронеж</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Омск">Омск</option>
 								</select>
 								<button type="button" class="s-ic s-ic-choose s-choose__btn"></button>
 							</div>
@@ -57,11 +57,11 @@
 							<div class="s-choose__label">Станция метро:</div>
 							<div class="s-choose__select">
 								<select name="s_metro">
-									<option value="Санкт-Петербург">Санкт-Петербург</option>
-									<option value="Москва">Москва</option>
-									<option value="Тула">Тула</option>
-									<option value="Воронеж">Воронеж</option>
-									<option value="Омск">Омск</option>
+									<option data-url="https://en.wikipedia.org/wiki/Saint_Petersburg_Metro" value="Санкт-Петербург" class="current">Санкт-Петербург</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow_Metro" value="Москва">Москва</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Тула">Тула</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Воронеж">Воронеж</option>
+									<option data-url="https://en.wikipedia.org/wiki/Moscow" value="Омск">Омск</option>
 								</select>
 								<button type="button" class="s-ic s-ic-choose s-choose__btn"></button>
 							</div>
@@ -71,7 +71,7 @@
 
 					<div class="s-callback">
 						<noindex><a href="tel:+7495555555" class="s-phone-link s-head-phone">+7 (495) 55 55 55</a></noindex>
-						<button type="button" class="s-callback__open">Обратный звонок</button>
+						<button type="button" class="s-callback__open s-js-callback">Обратный звонок</button>
 					</div>
 
 				</header>
@@ -104,7 +104,7 @@
 							<li><a href="#" class="s-menu__link s-menu__link-8">Интим-чат</a></li>
 							<li><a href="#" class="s-menu__link s-menu__link-9">Форум</a></li>
 							<li><a href="#" class="s-menu__link s-menu__link-10">Добавить анкету</a></li>
-							<li><a href="#" class="s-menu__link s-menu__link-11">Заказать звонок</a></li>
+							<li><button class="s-menu__link s-menu__link-11 s-js-callback">Заказать звонок</button></li>
 							<li><a href="#" class="s-menu__link s-menu__link-12">Оставить заявку</a></li>
 						</ul>
 	
@@ -655,10 +655,30 @@
 				</footer>
 
 				
-
-
-
 			</div>
+
+
+			<div class="s-scroll-btn-wrap" style="display: none;">
+				<div class="s-scroll-btn"></div>
+			</div>
+
+
+			<div class="s-modal mfp-hide">
+				<div class="s-modal__container">
+					<div class="mfp-close"></div>
+					<div class="s-modal__title">мы перезвоним вам в течение 10&nbsp;минут</div>
+					<div class="s-modal__form">
+						<form action="#">
+							<input type="text" name="Имя" class="s-modal__input err" placeholder="Ваше имя" required>
+							<input type="tel" name="Телефон" class="s-modal__input s-js-mask" placeholder="Телефон" required>
+							<button type="submit" class="s-modal__btn">перезвоните мне</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="s-modal-img"></div>
 
 
 
