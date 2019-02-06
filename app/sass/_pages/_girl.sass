@@ -1,0 +1,162 @@
+.s-data
+	display: flex
+
+	
+.s-preview
+	flex: 0 0 341px
+	max-width: 341px
+	.s-img-wrap
+		margin: 0
+	&__slider
+		margin-bottom: 3px
+	&__img
+		width: 100%
+		max-width: 341px
+		height: 238px
+	&__nav
+		&-img
+			width: 83px
+			height: 57px
+			cursor: pointer
+	.s-img
+		width: 100%
+		height: 100%
+
+
+.s-info
+	flex: 1 0 auto
+	max-width: 100%
+	padding-left: 27px
+	&__table
+		width: 100%
+		border-collapse: collapse
+		font: 11px $font-2
+		&.s-table-1-2
+			.s-info__td
+				width: 50%
+		&.s-table-1-4
+			.s-info__td
+				padding: 4px 0
+				line-height: 1.2
+				&:not(:first-child)
+					width: 26%
+					text-align: center
+		&.s-table-2-2
+			.s-info__td:first-child
+				width: 115px
+			.s-info__td:not(:first-child)
+				color: $text-color-3
+		.s-link::after
+			bottom: 1px
+
+
+	&__th
+		width: 100%
+		padding: 2px 5px
+		box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5)
+		border-radius: 5px
+		background-image: linear-gradient(to top, #e5e5e5 0%, #f2f2f2 100%)
+		text-align: center
+		color: $text-color-3
+	&__td
+		padding: 5px 0
+		line-height: 1.3
+		color: #232323
+
+.s-styled-tr
+	.s-info__td
+		padding: 9px 0 5px !important
+		border-bottom: 1px solid $text-color-3
+
+.s-tech-cell
+	padding-top: 10px
+	font: italic 12px $font-2
+	color: $text-color-3
+
+
+
+.s-columns
+	margin: 25px 0 0
+	padding: 0 0 0 10px
+	list-style: none
+	font-size: 12px
+	font-weight: 700
+	color: $text-color-3
+	column-count: 3
+
+	&__title, &__item
+		position: relative
+		margin-bottom: 4px
+		padding-left: 20px
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			background: url('../img/sprite-icons.png') no-repeat
+			z-index: 0
+	&__title
+		color: $text-color
+		&::before
+			left: 0
+			width: 15px
+			height: 16px
+			background-size: 56px 65px
+			background-position: 0px -20px
+	&__item
+		&::before
+			left: 3px
+			width: 9px
+			height: 9px
+			background-position: -90px -104px
+		&.checked
+			color: $text-color
+			text-decoration: underline
+			&::before
+				width: 12px
+				height: 12px
+				background-position: -90px -114px
+
+
+
+
+@media only screen and (max-width : 767px)
+
+	.s-data
+		display: block
+	.s-preview
+		margin: 0 auto
+	.s-info
+		margin-top: 30px
+		padding-left: 0
+	.s-columns
+		column-count: 2
+	.s-mob-block
+		display: block
+	td.s-mob-block
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+
+
+@media only screen and (max-width : 480px)
+
+	.s-columns
+		column-count: 1
+	.s-preview .s-img-wrap
+		margin: 0 auto
+	.s-info__table.s-table-1-4 .s-info__td:not(:first-child)
+		width: 20%
+	.s-info__table.s-table-1-4 .s-info__td:nth-child(2)
+		width: 33%
+
+
+
+@media only screen and (max-width : 370px)
+
+	.s-preview__img
+		height: 202px
+	.s-preview__nav-img
+		width: 70px
+		height: 48px

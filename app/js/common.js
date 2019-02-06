@@ -13,4 +13,19 @@ $(function() {
 		$('.s-left').toggleClass('opened');
 	});
 
+	$('.s-preview__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.s-preview__nav',
+		lazyLoad: 'ondemand'
+	  });
+	$('.s-preview__nav').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '.s-preview__slider',
+		focusOnSelect: true
+	});
+
 });

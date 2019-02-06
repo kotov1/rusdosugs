@@ -13,6 +13,8 @@
 	line-height: 1.7
 	&__section
 		padding-top: 35px
+		> p:last-child
+			margin-bottom: 0
 	.s-link
 		color: $text-color-3
 		&::after
@@ -186,34 +188,7 @@
 
 
 
-.s-footer
-	padding: 57px 58px 70px 33px
-	border-top: 1px solid #555
-	display: flex
-	align-items: center
-	justify-content: space-between
-	font-size: 12px
-	&__data
-		margin: 0
-		font-family: $font-2
-		b
-			font-size: 13px
-	&__links
-		display: flex
-		margin: 0
-		padding-left: 0
-		list-style: none
-		li
-			padding: 0 18px
-			line-height: 1.2
-			&:not(:last-child)
-				border-right: 1px solid $text-color-3
-	&__link
-		font-weight: 700
-		color: $text-color-3
-		&::after
-			background: $text-color-3
-			bottom: 0
+
 
 
 .s-catalog
@@ -322,6 +297,11 @@
 
 
 
+@media only screen and (min-width : 1200px)
+	
+	.s-center
+		min-height: 3000px
+
 
 @media only screen and (max-width : 1199px)
 	
@@ -339,12 +319,12 @@
 		opacity: 0
 		visibility: hidden
 		border: none
-		transition: all .2s linear
+		transition: all .1s linear
 		&.opened
 			opacity: 1
 			visibility: visible
 			transform: translateX(0) scale(1)
-			transition: transform .3s linear, opacity .3s .1s linear
+			transition: transform .3s linear, opaci1y .3s .1s linear
 
 	.s-center
 		flex: 1 0 0
@@ -357,21 +337,13 @@
 	.s-container
 		display: block
 	.s-right
-		max-width: 100%
+		margin: 0 auto
 		border: none
 
-	.s-footer
-		display: block
-		padding: 30px 15px
-		text-align: center
-	.s-live-counter
-		display: flex
-	.s-footer__links, .s-live-counter
-		margin-top: 30px
+	.s-reccomend
 		justify-content: center
-
 	.s-reccomend__item
-		margin: 0 0 30px
+		margin: 0 auto 30px
 
 
 
@@ -382,13 +354,6 @@
 	.s-center
 		padding-left: 15px
 		padding-right: 15px
-
-	.s-footer__links
-		display: block
-	.s-footer__links li
-		padding: 8px 0
-	.s-footer__links li:not(:last-child)
-		border: none
 
 	.s-catalog
 		display: block
@@ -425,3 +390,15 @@
 			font-size: 14px
 			&::before 
 				display: none
+
+
+@media only screen and (max-width : 480px)
+
+	.s-reccomend
+		display: block
+	.s-reccomend__item
+		max-width: 290px
+	.s-reccomend__img
+		max-width: 138px
+	h2.s-text-left
+		text-align: center
